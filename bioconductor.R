@@ -63,28 +63,8 @@ plotFamily
 plotGenus
 plotPhylum
 
-##subsets##
 
-
-##tree agglomeration stuff
-
-multiPlotTitleTextSize = 15
-p2tree = plot_tree(ps, method = "treeonly",
-                   ladderize = "left",
-                   title = "Before Agglomeration") +
-  theme(plot.title = element_text(size = multiPlotTitleTextSize))
-p2tree
-
-ps3 = tax_glom(ps, "Genus", NArm = TRUE)
-
-p3tree = plot_tree(ps3, method = "treeonly",
-                   ladderize = "left", title = "By Genus") +
-  theme(plot.title = element_text(size = multiPlotTitleTextSize))
-p3tree
-
-
-
-##by colony - Figure 5C code###
+##by colony - Figure 5B and 5C code###
 plot_abundance = function(physeq,title = "",
                           Facet = "Order", Color = "Phylum"){
   # Arbitrary subset, based on Phylum, for plotting
